@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — TITIwritesRandom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <a href="writings.html" class="back-link">← public archive</a>
+
+    <section id="login-panel" class="admin-panel">
+      <p class="eyebrow">private</p>
+      <h1>Admin</h1>
+      <p class="muted">Only the owner should have access to this area.</p>
+      <form id="login-form">
+        <label>
+          Admin email
+          <input id="email" type="email" autocomplete="username" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Password
+          <input id="password" type="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit" class="primary-button">Sign in</button>
+        <p id="login-message" class="form-message"></p>
+      </form>
+    </section>
+
+    <section id="dashboard" class="admin-panel hidden">
+      <div class="dashboard-head">
+        <div>
+          <p class="eyebrow">private archive</p>
+          <h1>Your writings</h1>
+        </div>
+        <button id="logout" class="text-button">Sign out</button>
+      </div>
+
+      <button id="new-writing" class="add-writing">
+        <span>+</span>
+        <span>New writing</span>
+      </button>
+
+      <div id="admin-list" class="admin-list"></div>
+
+      <p class="admin-note">
+        Demo interface: entries are saved in this browser only. Connect this page to a real authenticated database before public deployment.
+      </p>
+    </section>
+
+    <section id="editor" class="admin-panel hidden">
+      <div class="dashboard-head">
+        <div>
+          <p class="eyebrow">editor</p>
+          <h1 id="editor-heading">New writing</h1>
+        </div>
+        <button id="cancel-edit" class="text-button">Cancel</button>
+      </div>
+
+      <form id="writing-form">
+        <input id="editing-id" type="hidden">
+        <label>
+          Title
+          <input id="writing-title" type="text" placeholder="The title" required>
+        </label>
+        <label>
+          Date
+          <input id="writing-date" type="text" placeholder="September 2026">
+        </label>
+        <label>
+          Writing
+          <textarea id="writing-body" rows="18" placeholder="Write here..." required></textarea>
+        </label>
+        <label class="checkbox-label"><input id="writing-published" type="checkbox" checked> Publish publicly</label>
+        <div class="editor-actions">
+          <button type="submit" class="primary-button">Save writing</button>
+          <button type="button" id="cancel-edit-2" class="secondary-button">Cancel</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="supabase.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
