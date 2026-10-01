@@ -1,0 +1,12 @@
+{
+  "name": "titiwritesrandom",
+  "version": "1.0.0",
+  "description": "A dark literary writing archive",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build step needed for static site'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  }
+}
