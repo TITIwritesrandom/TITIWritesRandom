@@ -1,0 +1,23 @@
+{
+  "name": "titiwritesrandom",
+  "version": "1.0.0",
+  "description": "A dark literary writing archive with a themed entrance, public read-only archive, individual writing pages, and a private owner-only admin dashboard.",
+  "main": "admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TITIwritesrandom/TITIWritesRandom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TITIwritesrandom/TITIWritesRandom/issues"
+  },
+  "homepage": "https://github.com/TITIwritesrandom/TITIWritesRandom#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
